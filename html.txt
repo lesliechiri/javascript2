@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3>Fruits</h3>
+  <input name = "fruits" placeholder = "fruits" type ="text" id = "fruit"/>
+  <button onclick = "appendNewElement('id')">Submit</button>
+  <ul id="fruitList">
+  </ul>
+  <h3 >Vegetables</h3>
+  <input name = "vegetables" placeholder = "vegetables" type ="text" id = "vegs"/>
+  <ul id="vegList">
+
+  </ul>
+</body>
+</html

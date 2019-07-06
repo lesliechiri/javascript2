@@ -1,0 +1,6 @@
+ var setColor = ()=>{
+    var titleColor = document.getElementById("title");
+    titleColor.style.color = 
+    titleColor.style.color ==="green"? "silver":"green";
+}
+setInterval(setColor,1000);
