@@ -4,3 +4,59 @@
     titleColor.style.color ==="green"? "silver":"green";
 }
 setInterval(setColor,1000);
+
+
+var h3s = document.getElementsByTagName("h3")
+var fruitsH3 = h3s[0];
+var vegetablesH3 = h3s[1];
+var fruList = document.getElementById('fruList');
+var vegList = document.getElementById('vegList');
+
+var collapse = false;
+function toggleCollapse(element){
+  collapse = !collapse;
+  var style = collapse ?'none' :'block';
+  element.style.display = style;
+} 
+fruitsH3.addEventListener('click',() => toggleCollapse(fruList));
+vegetablesH3.addEventListener('click',() => toggleCollapse(vegList));
+
+
+
+var fruInput = document.getElementById('fruInput');
+var fruSubmit = document.getElementById('fruSubmit');
+
+fruSubmit.addEventListener('click',() => {
+  var newFruit = fruInput.value;
+  if (!newFruit) return;
+  fruInput.value = null;
+  var li = document.createElement('li');
+  var textNode = document.createTextNode(newFruit);
+  li.appendChild(textNode);
+  fruList.appendChild(li);
+})
+
+
+
+
+
+var vegInput = document.getElementById('vegInput');
+
+vegInput.addEventListener('keyup',(event) => {
+  if (event.keyCode === 13) {
+    
+    event.preventDefault();
+    var newVegetable = vegInput.value;
+    if (!newVegetable) return;
+    vegInput.value = null;
+    var li = document.createElement('li');
+    var textNode = document.createTextNode(newVegetable);
+    li.appendChild(textNode);
+    vegList.appendChild(li);
+    
+    
+    
+  }
+  
+});
+
